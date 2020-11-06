@@ -7,8 +7,8 @@ spring:
       server:
         git:
           uri: https://github.com/Neighlink/config-data.git
-          username: ${GIT_USER}
-          password: ${GIT_PASSWORD}}
+          username: ${{secrets.USERNAME}}
+          password: ${{secrets.PASSWORD}}
           default-label: "main"
 
   security:

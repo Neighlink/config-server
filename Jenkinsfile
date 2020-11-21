@@ -1,11 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'chmod +x gradlew'
-      args './gradlew build'
-    }
-
-  }
+  agent any
   stages {
     stage('Build') {
       steps {

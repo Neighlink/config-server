@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  config-service:
+    image: mugarte/config-service
+    container_name: config-service
+    networks:
+      - micro-service-networks
+    ports:
+      - 8081:8081
+  registry-service:
+    image: mugarte/registry-service
+    container_name: registry-service
+    networks:
+      - micro-service-networks
+    ports:
+      - 8099:8099
+  api-gateway:
+    image: mugarte/api-gateway
+    container_name: api-gateway
+    networks:
+      - micro-service-networks
+    ports:
+      - 8080:8080
+networks:
+  micro-service-networks:
